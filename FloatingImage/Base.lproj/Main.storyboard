@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goe-PN-lIx" customClass="PushButtonView" customModule="FloatingImage" customModuleProvider="target">
+                                <rect key="frame" x="250" y="350" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4fy-aC-Anh"/>
+                                    <constraint firstAttribute="height" constant="100" id="pDS-FJ-a0p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.26506683650000001" green="0.5568627451" blue="0.50686411919999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7I5-PS-qk2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgY-ZH-ffn" customClass="PushButtonView" customModule="FloatingImage" customModuleProvider="target">
+                                <rect key="frame" x="275" y="536" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0cz-fx-eGu"/>
+                                    <constraint firstAttribute="width" constant="50" id="x6H-bg-j33"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.49870465800087194" blue="0.47726773926854049" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1uP-7z-7SD"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62p-Nb-AmE" customClass="CounterView" customModule="FloatingImage" customModuleProvider="target">
+                                <rect key="frame" x="185" y="81" width="230" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-wp-Dc8">
+                                        <rect key="frame" x="92" y="93" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="XR6-AU-J2S"/>
+                                            <constraint firstAttribute="height" constant="45" id="hbF-QK-Z1a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="Q41-Bo-5p0"/>
+                                    <constraint firstAttribute="height" constant="230" id="R7t-px-YUw"/>
+                                    <constraint firstItem="7wS-wp-Dc8" firstAttribute="centerY" secondItem="62p-Nb-AmE" secondAttribute="centerY" id="YQC-Qp-S7Y"/>
+                                    <constraint firstItem="7wS-wp-Dc8" firstAttribute="centerX" secondItem="62p-Nb-AmE" secondAttribute="centerX" id="gx0-mg-nE7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.41040624669300324" green="0.8980392157" blue="0.84620645852244991" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="goe-PN-lIx" firstAttribute="leading" secondItem="62p-Nb-AmE" secondAttribute="trailing" id="Dyx-AB-cLo"/>
+                            <constraint firstItem="zgY-ZH-ffn" firstAttribute="top" secondItem="goe-PN-lIx" secondAttribute="bottom" constant="86" id="PQZ-yN-g2U"/>
+                            <constraint firstItem="62p-Nb-AmE" firstAttribute="centerX" secondItem="goe-PN-lIx" secondAttribute="centerX" id="bOX-PO-Jja"/>
+                            <constraint firstItem="goe-PN-lIx" firstAttribute="top" secondItem="62p-Nb-AmE" secondAttribute="bottom" constant="39" id="bdY-SD-OJP"/>
+                            <constraint firstItem="goe-PN-lIx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rXI-rY-4GD"/>
+                            <constraint firstItem="goe-PN-lIx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="ssb-0N-7aY"/>
+                            <constraint firstItem="zgY-ZH-ffn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zjb-mn-Jr2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dyx-AB-cLo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="7wS-wp-Dc8" id="dJw-lw-VUp"/>
+                        <outlet property="counterView" destination="62p-Nb-AmE" id="D9d-bQ-ats"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="322"/>
+        </scene>
+    </scenes>
+</document>
